@@ -1,18 +1,18 @@
-## 社内Git勉強会
+# 社内Git勉強会
 
-### 勉強会のゴール
+## 勉強会のゴール
 
 - 基本的なgitの操作に慣れる
 - 実際に文言修正pull requestを投げられるようにする
 
 TODO: 井上くんに「なんすか？めんどくさいっす自分で直してください」って言われなくなるみたいないらすと屋の画像を作る
 
-### 対象者
+## 対象者
 
 - ソフトウェア開発のPM
 - 駆け出しエンジニア
 
-### 必要なもの
+## 必要なもの
 
 * [Git Kraken](https://www.gitkraken.com/download/mac)
 * [VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)
@@ -26,11 +26,11 @@ TODO: 井上くんに「なんすか？めんどくさいっす自分で直し�
 * [SourceTree](https://www.sourcetreeapp.com/)
 * [GitHub Desktop](https://desktop.github.com/)
 
-### そもそもGitってなんなの？
+## そもそもGitってなんなの？
 
 分散型みたいな話を書く
 
-### 抑えとくべきコマンド
+## 抑えとくべきコマンド
 
 基本
 1. `git clone`
@@ -46,11 +46,11 @@ TODO: 井上くんに「なんすか？めんどくさいっす自分で直し�
 
 最低限これさえあればなんとかなる。
 
-### まずはレポジトリをcloneする
+## まずはレポジトリをcloneする
 
 TODO: 書く
 
-### ログを見てみる
+## ログを見てみる
 
 TODO: 書く
 
@@ -82,7 +82,7 @@ TODO: 書く
 
 TODO: 書く
 
-### 参考記事
+## 参考記事
 
 - [GitHubで共同開発のためのチュートリアル](https://qiita.com/takeokunn/items/5bc499121a21f8c5b990)
 - [サルでもわかるGit入門](https://backlog.com/ja/git-tutorial/)
