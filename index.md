@@ -65,7 +65,7 @@ TODO: 井上くんに「なんすか？めんどくさいっす自分で直し�
 ### コマンドの導入
 
 ```
-$ # homebrew入れるコマンド
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew install git
 $ git --version
 git version 2.25.0
@@ -86,19 +86,27 @@ $ ssh-keygen -t rsa -b 4096 -C "tomimori_s@uuum.jp" -f tomimori_s
 [このレポジトリ](https://github.com/UUUM/git-study) をクローンする
 
 ```
-$ git clone
+$ cd ~/Desktop
+$ git clone git@github.com:UUUM/git-study.git
+$ cd git-study
 ```
 
 VSCodeでクローンした `UUUM/git-study` を開いてみる。
 
 ## issueを立ててみる
 
-TODO: 書く
+url: [https://github.com/UUUM/git-study/issues](https://github.com/UUUM/git-study/issues)
+
+先に立ててみた
+
+![issue.png](./img/issue.png)
 
 ## branchを切ってみる
 ### VSCodeの場合
 
-TODO: 書く
+![branch_1.png](./img/branch_1.png)
+
+![branch_2.png](./img/branch_2.png)
 
 ### コマンドラインでやる場合
 
@@ -121,7 +129,7 @@ issueで割り当てられたファイルを適当に編集してみる。
 
 ### VSCodeの場合
 
-TODO: 書く
+![commit.png](./img/commit.png)
 
 ### コマンドラインでやる場合
 
@@ -147,13 +155,21 @@ $ git push origin HEAD
 
 ## pull requestを作り、mergeしてみる
 
-TODO: 書く
+![./img/pull_request_1.png](./img/pull_request_1.png)
+
+![./img/pull_request_2.png](./img/pull_request_2.png)
+
+![./img/pull_request_3.png](./img/pull_request_3.png)
+
+![./img/pull_request_4.png](./img/pull_request_4.png)
 
 ## masterを最新にする
 
 ### VSCodeの場合
 
-TODO: 書く
+![./img/pull_1.png](./img/pull_1.png)
+
+![./img/pull_2.png](./img/pull_2.png)
 
 ### コマンドラインでやるなら
 ```
