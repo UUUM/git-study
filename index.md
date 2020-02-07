@@ -135,8 +135,25 @@ GitHubに戻って貼り付けてから`Add SSH KEY`をクリック。タイト�
 
 # GitHubと通信できるか確認する
 
+ssh通信する設定を書いた`config`ファイルを落としてくる
+
 ```
-$ curl -O
+$ curl https://raw.githubusercontent.com/UUUM/git-study/master/config.sample > ~/.ssh/config
+```
+
+自分が作ったssh keyの名前でファイルの中身を置換する
+
+```
+$ sed -i -e 's/tomimori_s/okubo_m/' ~/.ssh/config
+```
+
+sshコマンドでGitHubにつなげられるかチェックする
+パスフレーズを聞かれるのでssh keyを作ったときと同じものを入れる。
+
+```
+$ ssh -T github.com
+Enter passphrase for key '/Users/tousa_k/.ssh/okubo_m':
+Hi [GitHubのユーザー名]! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
 ## まずはレポジトリをcloneする
