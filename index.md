@@ -14,7 +14,6 @@ TODO: 井上くんに「なんすか？めんどくさいっす自分で直し�
 
 ## 必要なもの
 
-* [Git Kraken](https://www.gitkraken.com/download/mac)
 * [VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)
 
 コマンドラインでやりたい人は `terminal` に `git` を入れてください。
@@ -25,58 +24,141 @@ TODO: 井上くんに「なんすか？めんどくさいっす自分で直し�
 
 * [SourceTree](https://www.sourcetreeapp.com/)
 * [GitHub Desktop](https://desktop.github.com/)
+* [Git Kraken](https://www.gitkraken.com/download/mac)
+
+今回はVSCodeのGitの機能を使おうと思います。
 
 ## そもそもGitってなんなの？
 
-分散型みたいな話を書く
+難しく言うと、分散型レポジトリシステム。
 
-## 抑えとくべきコマンド
+簡単に言うと、複数人でできるバージョン管理システム。
 
-基本
-1. `git clone`
-2. `git status`
-3. `git add`
-4. `git commit`
-5. `git push`
-6. `git pull`
-
-ブランチ操作
-1. `git branch`
-2. `git checkout`
+## 抑えとくべき用語/コマンド
 
 最低限これさえあればなんとかなる。
 
+### 用語
+
+1. レポジトリ ...
+2. ローカル ... 自分のPCのこと
+3. ブランチ ...
+4. チェックアウト ...
+5. コマンドライン ... 黒い画面の文字列しかないやつ
+
+### 基本
+
+1. `git clone` ... レポジトリをローカルにダウンロードしてくる
+2. `git status` ... 自分が変更したファイルが見れる
+3. `git add` ... 自分が変更したファイルを
+4. `git commit` ... `add` で選択したファイルにコメントを付けて保存
+5. `git push` ... ローカルにある最新の情報をGitHubにアップロードする
+6. `git pull` ... GitHub上にあるレポジトリの最新の情報を取ってくる
+
+### ブランチ操作
+
+1. `git branch` ... ブランチの操作をする
+2. `git checkout` ... ブランチを切り替える
+
+
+## gitコマンドを入れて、ssh keyをGitHubに登録する
+### コマンドの導入
+
+```
+$ # homebrew入れるコマンド
+$ brew install git
+$ git --version
+git version 2.25.0
+```
+
+### ssh keyを作成してGitHubに登録する
+
+```
+
+```
+
 ## まずはレポジトリをcloneする
 
-TODO: 書く
+[このレポジトリ](https://github.com/UUUM/git-study) をクローンする
+
+```
+$ git clone
+```
+
+VSCodeでクローンした `UUUM/git-study` を開いてみる。
 
 ## issueを立ててみる
 
 TODO: 書く
 
 ## branchを切ってみる
+### VSCodeの場合
 
 TODO: 書く
+
+### コマンドラインでやる場合
+
+```
+# 01.mdを更新したい場合
+$ git branch
+* master
+$ git checkout -b feature/update-01_md
+Switched to a new branch 'feature/update-01_md'
+$ git br
+* feature/update-01_md
+  master
+```
 
 ## 作業をする
 
-TODO: 書く
+issueで割り当てられたファイルを適当に編集してみる。
 
 ## commitしてpushをする
 
-TODO: 書く
-
-## pull requestを作る
+### VSCodeの場合
 
 TODO: 書く
 
-## mergeしてみる
+### コマンドラインでやる場合
+
+`01.md` のファイルを編集した場合こういう表示になる
+```
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+    modified:   01.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+$ git add 01.md
+$ git commit -m "ここにコミットメッセージを書く"
+$ git push origin HEAD
+```
+
+## pull requestを作り、mergeしてみる
 
 TODO: 書く
 
 ## masterを最新にする
 
+### VSCodeの場合
+
 TODO: 書く
+
+### コマンドラインでやるなら
+```
+$ git branch
+* feature/add-01
+  master
+$ git checkout maser
+$ git pull
+```
 
 ## 参考記事
 
