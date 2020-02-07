@@ -125,7 +125,7 @@ issueで割り当てられたファイルを適当に編集してみる。
 
 ### VSCodeの場合
 
-TODO: 書く
+![commit.png](./img/commit.png)
 
 ### コマンドラインでやる場合
 
