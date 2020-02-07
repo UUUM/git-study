@@ -65,7 +65,7 @@ TODO: 井上くんに「なんすか？めんどくさいっす自分で直し�
 ### コマンドの導入
 
 ```
-$ # homebrew入れるコマンド
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew install git
 $ git --version
 git version 2.25.0
@@ -82,14 +82,19 @@ git version 2.25.0
 [このレポジトリ](https://github.com/UUUM/git-study) をクローンする
 
 ```
-$ git clone
+$ git clone git@github.com:UUUM/git-study.git
+$ cd git-study
 ```
 
 VSCodeでクローンした `UUUM/git-study` を開いてみる。
 
 ## issueを立ててみる
 
-TODO: 書く
+url: [https://github.com/UUUM/git-study/issues](https://github.com/UUUM/git-study/issues)
+
+先に立ててみた
+
+![issue.png](./img/issue.png)
 
 ## branchを切ってみる
 ### VSCodeの場合
