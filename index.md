@@ -78,8 +78,9 @@ git version 2.25.0
 $ mkdir ~/.ssh
 $ cd ~/.ssh
 # ssh_keygen = ssh keyを生成するコマンド
+# `tomimori_s`は自分の名前に変更
 $ ssh-keygen -t rsa -b 4096 -C "tomimori_s@uuum.jp" -f tomimori_s
-# コマンドを叩いた後にパスフレーズを2回聞かれるので入力します(画面には入力している内容は出ません)
+# コマンドを叩いた後にパスフレーズを2回聞かれるので入力します(画面には入力している内容は出ない)
 # パスフレーズは空でもOK
 $ ls -la
 -rw-------   1 tousa_k  staff  3381  2  7 11:47 tomimori_s
@@ -115,7 +116,8 @@ GitHub右上のメニューから`Settings`を選択
 
 ![add_key_to_github_3.png](./img/add_key_to_github_3.png)
 
-ここで一度ターミナルに戻って、コマンドを叩く。※`tomimori_s`ではなく、`tomimori_s.pub`であることに注意
+ここで一度ターミナルに戻って、コマンドを叩く。
+※`tomimori_s`ではなく、`tomimori_s.pub`であることに注意
 
 ```
 $ cat ~/.ssh/tomimori_s.pub | pbcopy
@@ -127,6 +129,15 @@ GitHubに戻って貼り付けてから`Add SSH KEY`をクリック。タイト�
 
 ![add_key_to_github_5.png](./img/add_key_to_github_5.png)
 
+元の画面に戻って、画像のように追加されていればOK。
+
+![add_key_to_github_6.png](./img/add_key_to_github_6.png)
+
+# GitHubと通信できるか確認する
+
+```
+$ curl -O
+```
 
 ## まずはレポジトリをcloneする
 
