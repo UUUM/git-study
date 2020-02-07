@@ -73,19 +73,30 @@ git version 2.25.0
 
 ### ssh keyを作成する
 
+~/.ssh = ssh関連のファイルを入れるディレクトリ
+ないかもしれないのでmkdirコマンドで作成する
+
 ```
-# ~/.ssh = ssh関連のファイルは原則ここに入れる
 $ mkdir ~/.ssh
 $ cd ~/.ssh
-# ssh_keygen = ssh keyを生成するコマンド
-# `tomimori_s`は自分の名前に変更
+```
+
+ssh_keygen = ssh keyを生成するコマンド
+`tomimori_s`とか`tomimori_s@uuum.jp`は自分のものに変更
+
+```
 $ ssh-keygen -t rsa -b 4096 -C "tomimori_s@uuum.jp" -f tomimori_s
-# コマンドを叩いた後にパスフレーズを2回聞かれるので入力します(画面には入力している内容は出ない)
-# パスフレーズは空でもOK
+```
+
+コマンドを叩いた後にパスフレーズを2回聞かれるので入力します(画面には入力している内容は出ない)
+パスフレーズは空でもOK
+
+```
 $ ls -la
 -rw-------   1 tousa_k  staff  3381  2  7 11:47 tomimori_s
 -rw-r--r--   1 tousa_k  staff   744  2  7 11:47 tomimori_s.pub
 ```
+
 ssh-keygenコマンドを叩いた直後。パスフレーズ1回目を聞かれる。
 
 ![ssh_keygen1.png](./img/ssh_keygen_1.png)
@@ -98,7 +109,7 @@ ssh keyが作られたところ。
 
 ![ssh_keygen3.png](./img/ssh_keygen_3.png)
 
-lsコマンドで中身を確認して`tomimori_s`と`tomimori_s.pub`ができていれば成功
+lsコマンドで中身を確認して`tomimori_s`と`tomimori_s.pub`ができていればOK
 
 ![ssh_keygen4.png](./img/ssh_keygen_4.png)
 
@@ -141,7 +152,7 @@ ssh通信する設定を書いた`config`ファイルを落としてくる
 $ curl https://raw.githubusercontent.com/UUUM/git-study/master/config.sample > ~/.ssh/config
 ```
 
-自分が作ったssh keyの名前でファイルの中身を置換する
+自分が作ったssh keyの名前でファイルの中身を置換する(`okubo_m`が自分のものになる)
 
 ```
 $ sed -i -e 's/tomimori_s/okubo_m/' ~/.ssh/config
@@ -152,8 +163,8 @@ sshコマンドでGitHubにつなげられるかチェックする
 
 ```
 $ ssh -T github.com
-Enter passphrase for key '/Users/tousa_k/.ssh/okubo_m':
-Hi [GitHubのユーザー名]! You've successfully authenticated, but GitHub does not provide shell access.
+Enter passphrase for key '/Users/XXX/.ssh/okubo_m':
+Hi MozyOk! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
 ## まずはレポジトリをcloneする
