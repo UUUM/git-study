@@ -151,7 +151,13 @@ $ git push origin HEAD
 
 ## pull requestを作り、mergeしてみる
 
-TODO: 書く
+![./img/pull_request_1.png](./img/pull_request_1.png)
+
+![./img/pull_request_2.png](./img/pull_request_2.png)
+
+![./img/pull_request_3.png](./img/pull_request_3.png)
+
+![./img/pull_request_4.png](./img/pull_request_4.png)
 
 ## masterを最新にする
 
