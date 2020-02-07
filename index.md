@@ -82,6 +82,7 @@ git version 2.25.0
 [このレポジトリ](https://github.com/UUUM/git-study) をクローンする
 
 ```
+$ cd ~/Desktop
 $ git clone git@github.com:UUUM/git-study.git
 $ cd git-study
 ```
@@ -99,7 +100,9 @@ url: [https://github.com/UUUM/git-study/issues](https://github.com/UUUM/git-stud
 ## branchを切ってみる
 ### VSCodeの場合
 
-TODO: 書く
+![branch_1.png](./img/branch_1.png)
+
+![branch_2.png](./img/branch_2.png)
 
 ### コマンドラインでやる場合
 
