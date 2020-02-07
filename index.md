@@ -74,7 +74,11 @@ git version 2.25.0
 ### ssh keyを作成してGitHubに登録する
 
 ```
-
+$ mkdir ~/.ssh
+$ cd ~/.ssh
+$ ssh-keygen -t rsa -b 4096 -C "tomimori_s@uuum.jp" -f tomimori_s
+# パスフレーズを2回聞かれるので入力します(画面には入力している内容は出ません)
+# パスフレーズは空でも大丈夫です
 ```
 
 ## まずはレポジトリをcloneする
