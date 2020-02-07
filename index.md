@@ -71,7 +71,7 @@ $ git --version
 git version 2.25.0
 ```
 
-### ssh keyを作成してGitHubに登録する
+### ssh keyを作成する
 
 ```
 # ~/.ssh = ssh関連のファイルは原則ここに入れる
@@ -85,10 +85,31 @@ $ ls -la
 -rw-------   1 tousa_k  staff  3381  2  7 11:47 tomimori_s
 -rw-r--r--   1 tousa_k  staff   744  2  7 11:47 tomimori_s.pub
 ```
+ssh-keygenコマンドを叩いた直後。パスフレーズ1回目を聞かれる。
 ![ssh_keygen1.png](./img/ssh_keygen_1.png)
+もう一度同じパスフレーズを入力。
 ![ssh_keygen2.png](./img/ssh_keygen_2.png)
+ssh keyが作られたところ。
 ![ssh_keygen3.png](./img/ssh_keygen_3.png)
+lsコマンドで中身を確認して`tomimori_s`と`tomimori_s.pub`ができていれば成功
 ![ssh_keygen4.png](./img/ssh_keygen_4.png)
+
+### 作成したssh keyをGitHubに登録する
+
+GitHub右上のメニューから`Settings`を選択
+![add_key_to_github_1.png](./img/add_key_to_github_1.png)
+`SSH and GPG keys`を選択
+![add_key_to_github_2.png](./img/add_key_to_github_2.png)
+`New SSH Key`を選択
+![add_key_to_github_3.png](./img/add_key_to_github_3.png)
+ここで一度ターミナルに戻って、コマンドを叩く。※`tomimori_s`ではなく、`tomimori_s.pub`であることに注意
+```
+$ cat ~/.ssh/tomimori_s.pub | pbcopy
+```
+![add_key_to_github_4.png](./img/add_key_to_github_4.png)
+GitHubに戻って貼り付けてから`Add SSH KEY`をクリック。タイトルは空でもOK。
+![add_key_to_github_5.png](./img/add_key_to_github_5.png)
+
 
 ## まずはレポジトリをcloneする
 
