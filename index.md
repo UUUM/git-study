@@ -157,7 +157,9 @@ TODO: 書く
 
 ### VSCodeの場合
 
-TODO: 書く
+![./img/pull_1.png](./img/pull_1.png)
+
+![./img/pull_2.png](./img/pull_2.png)
 
 ### コマンドラインでやるなら
 ```
