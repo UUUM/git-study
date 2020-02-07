@@ -142,7 +142,7 @@ GitHubに戻って貼り付けてから`Add SSH KEY`をクリック。タイト�
 
 元の画面に戻って、画像のように追加されていればOK。
 
-![add_key_to_github_6.png](./img/add_key_to_github_6.png)
+![add_key_to_github_6.png](https://raw.githubusercontent.com/UUUM/git-study/master/img/add_key_to_github_6.png)
 
 # GitHubと通信できるか確認する
 
